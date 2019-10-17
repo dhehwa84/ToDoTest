@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c944348a-3296-4bd1-9e1f-aad03d7f425f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/ToDoClient/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/ToDoClient/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDoClient/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ToDoClient/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDoClient/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ToDoClient/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDoClient/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ToDoClient/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDoClient/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ToDoClient/src/styles.scss" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/ToDoAPI/composer.json</pharConfigPath>
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ToDoAPI/composer.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ToDoClient/src/styles.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ToDoClient/src/app/app.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ToDoClient/src/app/components/navbar/navbar.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ToDoClient/src/app/components/navbar/navbar.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/ToDoAPI/composer.json" />
+        <option value="$PROJECT_DIR$/ToDoClient/src/styles.scss" />
+        <option value="$PROJECT_DIR$/ToDoClient/src/app/app.component.html" />
+        <option value="$PROJECT_DIR$/ToDoClient/src/app/components/navbar/navbar.component.html" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/league/flysystem" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/phpunit/php-token-stream" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/laravel/framework" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/laravel/tinker" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/dragonmantank/cron-expression" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/filp/whoops" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/composer" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/mockery/mockery" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/facade/ignition" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/facade/flare-client-php" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/facade/ignition-contracts" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/erusev/parsedown" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/fzaninotto/faker" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/jakub-onderka/php-console-highlighter" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/jakub-onderka/php-console-color" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/hamcrest/hamcrest-php" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/dnoegel/php-xdg-base-dir" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/fideloper/proxy" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/scrivo/highlight.php" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/nunomaduro/collision" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/psy/psysh" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/tijsverkoyen/css-to-inline-styles" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/opis/closure" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/symfony/polyfill-iconv" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/symfony/css-selector" />
+    </include_path>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+        <option value="$PROJECT_DIR$/.idea/ToDoTest.iml" />
+        <option value="$PROJECT_DIR$/.idea/misc.xml" />
+        <option value="$PROJECT_DIR$/.idea/php.xml" />
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="85" />
+    <option name="y" value="25" />
+    <option name="width" value="1750" />
+    <option name="height" value="980" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="ToDoTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ToDoTest" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ToDoTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ToDoTest" type="462c0819:PsiDirectoryNode" />
+              <item name="ToDoClient" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ToDoTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ToDoTest" type="462c0819:PsiDirectoryNode" />
+              <item name="ToDoClient" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ToDoTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ToDoTest" type="462c0819:PsiDirectoryNode" />
+              <item name="ToDoClient" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ToDoTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ToDoTest" type="462c0819:PsiDirectoryNode" />
+              <item name="ToDoClient" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="editor.config.ad.shown" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="ts.external.directory.path" value="C:\xampp\htdocs\ToDoTest\ToDoClient\node_modules\typescript\lib" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c944348a-3296-4bd1-9e1f-aad03d7f425f" name="Default Changelist" comment="" />
+      <created>1571306878002</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1571306878002</updated>
+      <workItem from="1571306883329" duration="6618000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="6618000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2033557" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="TypeScript" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.3198324" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32960895" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/ToDoAPI/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ToDoClient/src/styles.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ToDoClient/src/app/components/navbar/navbar.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ToDoClient/src/app/app.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ToDoClient/src/app/components/navbar/navbar.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
