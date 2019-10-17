@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c944348a-3296-4bd1-9e1f-aad03d7f425f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/ToDoTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ToDoTest.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ToDoAPI/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/ToDoAPI/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ToDoAPI/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/ToDoAPI/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ToDoAPI/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ToDoAPI/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ToDoAPI/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/ToDoAPI/config/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ToDoAPI/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/ToDoAPI/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDoClient/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ToDoClient/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDoClient/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ToDoClient/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDoClient/src/app/components/navbar/navbar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ToDoClient/src/app/components/navbar/navbar.component.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,11 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ToDoAPI/app/Http/Controllers/AuthController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1088">
-              <caret line="82" column="1" selection-start-line="82" selection-start-column="1" selection-end-line="82" selection-end-column="1" />
+            <state relative-caret-position="354">
+              <caret line="84" lean-forward="true" selection-start-line="84" selection-end-line="84" />
               <folding>
                 <element signature="e#40#76#0#PHP" expanded="true" />
               </folding>
@@ -81,10 +76,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ToDoClient/src/styles.scss">
+        <entry file="file://$PROJECT_DIR$/ToDoClient/src/app/app-routing.module.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="357">
+              <caret line="21" column="4" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+              <folding>
+                <element signature="e#0#50#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -93,16 +91,16 @@
         <entry file="file://$PROJECT_DIR$/ToDoClient/src/app/app.component.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+              <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ToDoClient/src/app/components/navbar/navbar.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="31" />
+            <state relative-caret-position="102">
+              <caret line="6" column="60" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -125,14 +123,15 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/ToDoClient/src/styles.scss" />
-        <option value="$PROJECT_DIR$/ToDoClient/src/app/app.component.html" />
-        <option value="$PROJECT_DIR$/ToDoClient/src/app/components/navbar/navbar.component.html" />
         <option value="$PROJECT_DIR$/ToDoAPI/config/app.php" />
         <option value="$PROJECT_DIR$/ToDoAPI/composer.json" />
         <option value="$PROJECT_DIR$/ToDoAPI/app/User.php" />
         <option value="$PROJECT_DIR$/ToDoAPI/config/auth.php" />
         <option value="$PROJECT_DIR$/ToDoAPI/routes/api.php" />
         <option value="$PROJECT_DIR$/ToDoAPI/app/Http/Controllers/AuthController.php" />
+        <option value="$PROJECT_DIR$/ToDoClient/src/app/app.component.html" />
+        <option value="$PROJECT_DIR$/ToDoClient/src/app/app-routing.module.ts" />
+        <option value="$PROJECT_DIR$/ToDoClient/src/app/components/navbar/navbar.component.html" />
       </list>
     </option>
   </component>
@@ -264,34 +263,37 @@
             <path>
               <item name="ToDoTest" type="b2602c69:ProjectViewProjectNode" />
               <item name="ToDoTest" type="462c0819:PsiDirectoryNode" />
-              <item name="ToDoAPI" type="462c0819:PsiDirectoryNode" />
+              <item name="ToDoClient" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ToDoTest" type="b2602c69:ProjectViewProjectNode" />
               <item name="ToDoTest" type="462c0819:PsiDirectoryNode" />
-              <item name="ToDoAPI" type="462c0819:PsiDirectoryNode" />
+              <item name="ToDoClient" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ToDoTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ToDoTest" type="462c0819:PsiDirectoryNode" />
+              <item name="ToDoClient" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ToDoTest" type="b2602c69:ProjectViewProjectNode" />
               <item name="ToDoTest" type="462c0819:PsiDirectoryNode" />
-              <item name="ToDoAPI" type="462c0819:PsiDirectoryNode" />
+              <item name="ToDoClient" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ToDoTest" type="b2602c69:ProjectViewProjectNode" />
               <item name="ToDoTest" type="462c0819:PsiDirectoryNode" />
-              <item name="ToDoAPI" type="462c0819:PsiDirectoryNode" />
+              <item name="ToDoClient" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ToDoTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ToDoTest" type="462c0819:PsiDirectoryNode" />
-              <item name="ToDoAPI" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="navbar" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -332,12 +334,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1571306878002</updated>
-      <workItem from="1571306883329" duration="11494000" />
+      <workItem from="1571306883329" duration="12967000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11494000" />
+    <option name="totallyTimeSpent" value="12967000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -392,20 +394,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ToDoClient/src/app/app.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ToDoClient/src/app/components/navbar/navbar.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ToDoAPI/config/jwt.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1428" />
@@ -453,11 +441,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ToDoAPI/app/Http/Controllers/AuthController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1088">
-          <caret line="82" column="1" selection-start-line="82" selection-start-column="1" selection-end-line="82" selection-end-column="1" />
+        <state relative-caret-position="354">
+          <caret line="84" lean-forward="true" selection-start-line="84" selection-end-line="84" />
           <folding>
             <element signature="e#40#76#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ToDoClient/src/app/app.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ToDoClient/src/app/app-routing.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="4" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ToDoClient/src/app/components/navbar/navbar.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="60" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
         </state>
       </provider>
     </entry>
