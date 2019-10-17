@@ -23,10 +23,12 @@
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/jakub-onderka/php-console-highlighter" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/laravel/framework" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/laravel/tinker" />
+      <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/lcobucci/jwt" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/league/flysystem" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/mockery/mockery" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/monolog/monolog" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/myclabs/deep-copy" />
+      <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/namshi/jose" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/nesbot/carbon" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/nikic/php-parser" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/nunomaduro/collision" />
@@ -77,8 +79,10 @@
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/symfony/polyfill-iconv" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/symfony/polyfill-intl-idn" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/symfony/polyfill-mbstring" />
+      <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/symfony/polyfill-php56" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/symfony/polyfill-php72" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/symfony/polyfill-php73" />
+      <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/symfony/polyfill-util" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/symfony/process" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/symfony/routing" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/symfony/service-contracts" />
@@ -87,6 +91,7 @@
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/symfony/var-dumper" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/theseer/tokenizer" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/tijsverkoyen/css-to-inline-styles" />
+      <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/tymon/jwt-auth" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/vlucas/phpdotenv" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/webmozart/assert" />
     </content>
