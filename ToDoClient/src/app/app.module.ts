@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {FormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +10,25 @@ import { SignupComponent } from './components/signup/signup.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { RequestResetComponent } from './components/password/request-reset/request-reset.component';
 import { ResponseResetComponent } from './components/password/response-reset/response-reset.component';
+import {HttpClientModule} from '@angular/common/http';
+import {JarwisService} from './Services/jarwis.service';
+import { TaskComponent } from './components/task/task.component';
+import {SnotifyModule, SnotifyService, ToastDefaults} from 'ng-snotify';
+import {TokenService} from './Services/token.service';
+import {AuthService} from './Services/auth.service';
+import {AfterLoginService} from './Services/after-login.service';
+import {BeforeLoginService} from './Services/before-login.service';
+import { DataTablesModule } from 'angular-datatables';
+import { CdkTableModule } from '@angular/cdk/table';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {
+  _MatMenuDirectivesModule,
+  MatButtonModule, MatFormFieldModule,
+  MatIconModule,
+  MatMenuModule, MatPaginatorModule,
+  MatTableModule
+} from '@angular/material';
+import { NewtaskComponent } from './components/newtask/newtask.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +38,30 @@ import { ResponseResetComponent } from './components/password/response-reset/res
     SignupComponent,
     ProfileComponent,
     RequestResetComponent,
-    ResponseResetComponent
+    ResponseResetComponent,
+    TaskComponent,
+    NewtaskComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    SnotifyModule,
+    DataTablesModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    _MatMenuDirectivesModule,
+    MatMenuModule,
+    MatIconModule,
+    MatTableModule,
+    CdkTableModule,
+    MatFormFieldModule,
+    MatPaginatorModule
   ],
-  providers: [],
+  providers: [JarwisService, TokenService, AuthService, AfterLoginService, BeforeLoginService,
+    { provide: 'SnotifyToastConfig', useValue: ToastDefaults},
+    SnotifyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,1 +1,67 @@
 <p>signup works!</p>
+<div class="mt-4 col-8 offset-2">
+  <div class="card">
+    <div class="card-header"> Login </div>
+    <div class="card-body">
+      <form #signUpForm=ngForm (ngSubmit)="onSubmit()">
+        <div class="alert alert-danger" [hidden]="!error">
+          {{error}}
+        </div>
+
+        <div class="form-group row">
+          <label for="name" class="col-sm-2 col-form-label">Name</label>
+          <div class="col-sm-10">
+            <input type="email" class="form-control" name="name" id="name" placeholder="Name" [(ngModel)]="form.name" required="">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="surname" class="col-sm-2 col-form-label">Surname</label>
+          <div class="col-sm-10">
+            <input type="email" class="form-control" name="surname" id="surname" placeholder="Surname" [(ngModel)]="form.surname" required="">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="email" class="col-sm-2 col-form-label">Email</label>
+          <div class="col-sm-10">
+            <input type="email" class="form-control" name="email" id="email" placeholder="Email" [(ngModel)]="form.email" required="">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control" name="password" id="inputPassword3" placeholder="Password" [(ngModel)]="form.password" required="">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="inputPasswordConfirmation3" class="col-sm-2 col-form-label">Confirm Password</label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control" name="password" id="inputPasswordConfirmation3" placeholder="Confirm Password" [(ngModel)]="form.password_confirmation" required="">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-sm-3 offset-1">
+            <button type="submit" class="btn btn-primary" [disabled]="!signUpForm.valid">Sign Up</button>
+          </div>
+
+          <div class="col-sm-3 offset-1">
+            <button type="clear" class="btn btn-primary" >Clear</button>
+          </div>
+
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-12 offset-1">
+            Already hav an account? <a routerLink="/login">Sign In</a>
+          </div>
+        </div>
+      </form>
+
+    </div>
+
+  </div>
+
+</div>
