@@ -22,7 +22,12 @@ export class JarwisService {
     return this.http.post(`${this.baseUrl}/task`, data);
   }
   getTask(data) {
-    console.log(`${this.baseUrl}/task`);
     return this.http.get(`${this.baseUrl}/task`);
+  }
+  getUser(data) {
+    return this.http.get(`${this.baseUrl}/me/${data}`);
+  }
+  updateUser(data, id) {
+    return this.http.post(`${this.baseUrl}/update/${id}`, data);
   }
 }

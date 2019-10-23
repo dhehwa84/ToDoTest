@@ -24,11 +24,13 @@ Route::group([
     Route::post('signup', 'AuthController@signup');
     Route::post('logout', 'AuthController@logout');
     Route::post('refresh', 'AuthController@refresh');
-    Route::post('me', 'AuthController@me');
+    Route::get('me/{id}', 'UserController@me');
+    Route::put('update/{id}', 'UserController@update');
     Route::post('sendPasswordResetLink', 'ResetPasswordController@sendEmail');
 
     Route::get('task', 'TaskController@index');
-    Route::get('task/{id}', 'TaskController@show');
+    Route::get('showtask/{id}', 'TaskController@showtask');
+    Route::get('tasks/{id}', 'TaskController@show');
     Route::post('task', 'TaskController@store');
     Route::put('task/{id}', 'TaskController@update');
     Route::delete('task/{id}', 'TaskController@delete');

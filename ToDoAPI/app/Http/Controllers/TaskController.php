@@ -11,7 +11,12 @@ class TaskController extends Controller
         return Task::all();
     }
     public function show($id){
+        // return Task::find($id);
+        return Task::where('created_by', '=', $id)->get();
+    }
+    public function showtask($id){
         return Task::find($id);
+
     }
     public function store(Request $request){
         return Task::create($request->all());

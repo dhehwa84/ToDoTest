@@ -8,10 +8,15 @@ import {ResponseResetComponent} from './components/password/response-reset/respo
 import {TaskComponent} from './components/task/task.component';
 import {BeforeLoginService} from './Services/before-login.service';
 import {AfterLoginService} from './Services/after-login.service';
-import {NewtaskComponent} from "./components/newtask/newtask.component";
+import {NewtaskComponent} from './components/newtask/newtask.component';
 
 
 const routes: Routes = [
+  {
+    path : '',
+    component : TaskComponent,
+    canActivate: [AfterLoginService]
+  },
   {
     path : 'login',
     component : LoginComponent,

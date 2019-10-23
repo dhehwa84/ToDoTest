@@ -34,9 +34,8 @@ export class LoginComponent implements OnInit {
   }
 
   handleResponse(data) {
-    console.log(data);
     this.User.setId(data.id);
-    this.User.setName(data.name);
+    this.User.setName(data.user);
     this.User.changeLoggedInName(data.user);
     this.Token.handle(data.access_token);
     this.Auth.changeAuthStatus(true);
