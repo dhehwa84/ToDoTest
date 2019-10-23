@@ -15,11 +15,12 @@ export class SignupComponent implements OnInit {
     name: null,
     surname: null,
     email: null,
-    image: '/assets/img/image.jpg',
+    image: '/img/image.jpg',
     password: null,
     password_confirmation: null
   };
   public error = null;
+  public message = null;
   constructor(
     private Jarwis: JarwisService,
     private Token: TokenService,
@@ -35,7 +36,7 @@ export class SignupComponent implements OnInit {
   handleResponse(data) {
     // this.Token.handle(data.access_token);
     // this.Auth.changeAuthStatus(false);
-    this.error = 'sign up complete! now login with your username and password.';
+    this.message = 'sign up complete! now login with your username and password.';
   }
 
   handleError(error) {

@@ -32,7 +32,7 @@ export class NewtaskComponent implements OnInit {
     );
   }
   handleResponse(data) {
-    this.error = data.message;
+    this.error = 'success';
   }
 
   handleError(error) {

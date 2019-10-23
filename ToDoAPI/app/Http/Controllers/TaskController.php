@@ -20,25 +20,13 @@ class TaskController extends Controller
     }
     public function store(Request $request){
 
-        $task =  Task::create($request->all());
-        if($task) {
-            return "success";
-        }
-        else {
-            return Task::create($request->all());
-        }
-
+       return Task::create($request->all());
     }
     public function update(Request $request, $id){
         $task = Task::findOrFail($id);
         $task->update($request->all());
 
-        if($task) {
-            return response()->json(['message' => 'success'], 201);
-        }
-        else {
-            return response()->json(['error' => 'failed to update'], 401);
-        }
+        return $task;
     }
     function delete($id){
         $task = Task::findORFail($id);

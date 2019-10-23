@@ -25,7 +25,7 @@ export class TaskComponent implements OnInit {
   private message = null;
   private form = {
     status: null
-  }
+  };
   constructor(
     private Jarwis: JarwisService,
     private Token: TokenService,
@@ -57,15 +57,16 @@ export class TaskComponent implements OnInit {
   }
   updateStatus(element, val) {
     this.form.status = val;
+    console.log(val);
     this.Jarwis.updateTaskStatus(this.form, element.id).subscribe(
-      data => this.message = data,
-      error => this.message = error.error
+      data => this.message = 'success',
+      error => console.log(error.status)
     );
   }
   delete(task) {
     this.Jarwis.deleteTask(task.id).subscribe(
-      data => this.message = data,
-      error => this.message = error.error
+      data => this.message = 'success',
+      error => this.message = error.status
     );
   }
 }
