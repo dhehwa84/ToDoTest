@@ -20,6 +20,7 @@ Route::group([
 
 ], function ($router) {
 
+    // user routes
     Route::post('login', 'AuthController@login');
     Route::post('signup', 'AuthController@signup');
     Route::post('logout', 'AuthController@logout');
@@ -33,11 +34,12 @@ Route::group([
     Route::post('testpost', 'UserController@testImageUpload');
 
 
+    //task routes
     Route::get('task', 'TaskController@index');
     Route::get('showtask/{id}', 'TaskController@showtask');
     Route::get('tasks/{id}', 'TaskController@show');
     Route::post('task', 'TaskController@store');
-    Route::put('task/{id}', 'TaskController@update');
+    Route::post('task/{id}', 'TaskController@update');
     Route::delete('task/{id}', 'TaskController@delete');
 
 });

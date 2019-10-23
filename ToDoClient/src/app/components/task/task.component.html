@@ -3,6 +3,9 @@
     <div class="card-header"> Tasks </div>
     <div class="card-body">
 
+      <div class="alert alert-success" [hidden]="!message">
+        {{message}}
+      </div>
       <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
         <!-- id COlumn -->
@@ -20,7 +23,28 @@
         <!-- id COlumn -->
         <ng-container matColumnDef="status">
           <mat-header-cell *matHeaderCellDef>status</mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.status}}</mat-cell>
+          <mat-cell *matCellDef="let element">
+            <mat-form-field>
+              <mat-label class="mat-label">{{element.status}}</mat-label>
+              <select matNativeControl #stat (change)="updateStatus(element, stat.value)" required>
+                <option value="">select to update</option>
+                <option value="pending">pending</option>
+                <option value="done">done</option>
+              </select>
+            </mat-form-field>
+          </mat-cell>
+        </ng-container>
+
+        <!-- id COlumn -->
+        <ng-container matColumnDef="view">
+          <mat-header-cell *matHeaderCellDef>view/ edit</mat-header-cell>
+          <mat-cell *matCellDef="let element">  <button class="btn btn-info" (click)="viewTask(element)"> edit</button> </mat-cell>
+        </ng-container>
+
+        <!-- id COlumn -->
+        <ng-container matColumnDef="delete">
+          <mat-header-cell *matHeaderCellDef>Delete</mat-header-cell>
+          <mat-cell *matCellDef="let element">  <button class="btn btn-danger" (click)="delete(element)"> edit</button> </mat-cell>
         </ng-container>
 
         <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>

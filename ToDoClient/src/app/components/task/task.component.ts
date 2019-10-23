@@ -7,6 +7,7 @@ import {BehaviorSubject, Observable} from 'rxjs';
 import 'rxjs/add/operator/map';
 import {map} from 'rxjs/operators';
 import {MatTableDataSource} from '@angular/material';
+import {ViewTaskService} from '../../Services/view-task.service';
 
 
 @Component({
@@ -19,14 +20,18 @@ export class TaskComponent implements OnInit {
   private id = null;
   private error = null;
   private tasksTable = null;
-  private displayedColumns: string[] = ['id', 'title', 'status'];
+  private displayedColumns: string[] = ['id', 'title', 'status', 'view', 'delete'];
   dataSource: MatTableDataSource<any>;
-
+  private message = null;
+  private form = {
+    status: null
+  }
   constructor(
     private Jarwis: JarwisService,
     private Token: TokenService,
     private router: Router,
-    private User: UserService) { }
+    private User: UserService,
+    private Task: ViewTaskService) { }
 
   ngOnInit() {
     this.onLoad();
@@ -38,15 +43,29 @@ export class TaskComponent implements OnInit {
       error => this.handleError(error)
     );
   }
+  viewTask(task) {
+    this.Task.changeViewId(task);
+    this.router.navigateByUrl('/viewtask');
+  }
   handleResponse(data) {
-    // this.Token.handle(data.access_token);
     this.tasksTable = new BehaviorSubject(data);
     this.dataSource = this.tasksTable;
-    console.log(data);
-    // this.router.navigateByUrl('/tasks');
   }
 
   handleError(error) {
     this.error = error.error.error;
+  }
+  updateStatus(element, val) {
+    this.form.status = val;
+    this.Jarwis.updateTaskStatus(this.form, element.id).subscribe(
+      data => this.message = data,
+      error => this.message = error.error
+    );
+  }
+  delete(task) {
+    this.Jarwis.deleteTask(task.id).subscribe(
+      data => this.message = data,
+      error => this.message = error.error
+    );
   }
 }

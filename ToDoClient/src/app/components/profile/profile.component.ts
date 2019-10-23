@@ -78,7 +78,7 @@ export class ProfileComponent implements OnInit {
     const fd = new FormData();
     fd.append('image', this.image);
     this.Jarwis.setImage(fd, this.form.id).subscribe(
-      data => this.form.imageUrl = data.url,
+      data => this.form.imageUrl = data,
       error => this.handleError(error)
     );
   }

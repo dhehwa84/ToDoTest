@@ -51,7 +51,7 @@ class UserController extends Controller
             $path = $request->file('image')->move(public_path('/img'), $fileName);
             User::where('id', $id)->update(array('image' => $fileUrl));
 
-            return response()->json(['url' => url(''.$fileUrl)], 200);
+            return url(''.$fileUrl);
         }else{
             return response()->json(['error' => 'no files'], 500);
         }

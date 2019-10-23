@@ -24,11 +24,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   _MatMenuDirectivesModule,
   MatButtonModule, MatFormFieldModule,
-  MatIconModule,
+  MatIconModule, MatInputModule,
   MatMenuModule, MatPaginatorModule,
   MatTableModule
 } from '@angular/material';
 import { NewtaskComponent } from './components/newtask/newtask.component';
+import { ViewtaskComponent } from './Components/viewtask/viewtask.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { NewtaskComponent } from './components/newtask/newtask.component';
     RequestResetComponent,
     ResponseResetComponent,
     TaskComponent,
-    NewtaskComponent
+    NewtaskComponent,
+    ViewtaskComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +59,8 @@ import { NewtaskComponent } from './components/newtask/newtask.component';
     MatTableModule,
     CdkTableModule,
     MatFormFieldModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatInputModule
   ],
   providers: [JarwisService, TokenService, AuthService, AfterLoginService, BeforeLoginService,
     { provide: 'SnotifyToastConfig', useValue: ToastDefaults},

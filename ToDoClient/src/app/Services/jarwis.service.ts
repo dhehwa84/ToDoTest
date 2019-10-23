@@ -4,6 +4,8 @@ import {HttpClient} from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
+/* this service handles all the http requests
+* */
 export class JarwisService {
 
   private baseUrl = 'http://localhost:8000/api';
@@ -22,7 +24,7 @@ export class JarwisService {
     return this.http.post(`${this.baseUrl}/task`, data);
   }
   getTask(data) {
-    return this.http.get(`${this.baseUrl}/task`);
+    return this.http.get(`${this.baseUrl}/tasks/${data}`);
   }
   getUser(data) {
     return this.http.get(`${this.baseUrl}/me/${data}`);
@@ -32,5 +34,11 @@ export class JarwisService {
   }
   setImage(data, id) {
     return this.http.post(`${this.baseUrl}/setimage/${id}`, data);
+  }
+  updateTaskStatus(data, id) {
+    return this.http.post(`${this.baseUrl}/task/${id}`, data);
+  }
+  deleteTask(id) {
+    return this.http.delete(`${this.baseUrl}/task/${id}`);
   }
 }

@@ -16,7 +16,6 @@ export class UserService {
   }
   changeLoggedInName(value: any) {
     this.name.next(value);
-    console.log('name changed to: ' + value);
   }
   setId(id) {
     localStorage.setItem('id', id);
