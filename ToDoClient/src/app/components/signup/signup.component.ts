@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {JarwisService} from '../../Services/jarwis.service';
 import {TokenService} from '../../Services/token.service';
 import {Router} from '@angular/router';
+import {AuthService} from '../../Services/auth.service';
 
 @Component({
   selector: 'app-signup',
@@ -14,6 +15,7 @@ export class SignupComponent implements OnInit {
     name: null,
     surname: null,
     email: null,
+    image: '/assets/img/image.jpg',
     password: null,
     password_confirmation: null
   };
@@ -21,7 +23,8 @@ export class SignupComponent implements OnInit {
   constructor(
     private Jarwis: JarwisService,
     private Token: TokenService,
-    private router: Router) { }
+    private router: Router,
+    private Auth: AuthService) { }
 
   onSubmit() {
     this.Jarwis.signup(this.form).subscribe(
@@ -30,8 +33,9 @@ export class SignupComponent implements OnInit {
     );
   }
   handleResponse(data) {
-    this.Token.handle(data.access_token);
-    this.router.navigateByUrl('/tasks');
+    // this.Token.handle(data.access_token);
+    // this.Auth.changeAuthStatus(false);
+    this.error = 'sign up complete! now login with your username and password.';
   }
 
   handleError(error) {

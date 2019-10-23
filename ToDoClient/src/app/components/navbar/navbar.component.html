@@ -1,31 +1,31 @@
 <!-- As a heading -->
 <nav class="navbar navbar-light bg-light justify-content-between">
-  <a class="navbar-brand" routerLink="/tasks" *ngIf="loggedIn">Dashboard</a>
+  <a class="navbar-brand" routerLink="/tasks" >Dashboard</a>
   <div>
 
-    <button mat-icon-button aria-label="Example icon-button with a menu" routerLink="newtask" *ngIf="loggedIn">
-      <mat-icon>add</mat-icon>
-    </button>
-
+    <a class="navbar-brand" href="login" *ngIf="!loggedIn">Login</a>
+    <div *ngIf="loggedIn">
+      <button mat-icon-button aria-label="Example icon-button with a menu" routerLink="newtask" *ngIf="loggedIn">
+        <mat-icon>add</mat-icon>
+      </button>
     <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
       <mat-icon>account_circle</mat-icon>
     </button>
     <a class="navbar-brand" href="#">{{name}}</a>
 
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item routerLink="profile" *ngIf="loggedIn">
-        <mat-icon>account_circle</mat-icon>
-        <span>Profile</span>
-      </button>
-      <button mat-menu-item routerLink="login" *ngIf="!loggedIn">
-        <mat-icon>voicemail</mat-icon>
-        <span>Login</span>
-      </button>
-      <button mat-menu-item (click)="logout($event)" *ngIf="loggedIn">
-        <mat-icon>exit_to_app</mat-icon>
-        <span>Logout</span>
-      </button>
-    </mat-menu>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item routerLink="profile" *ngIf="loggedIn">
+          <mat-icon >account_circle</mat-icon>
+          <span>Profile</span>
+        </button>
+
+        <button mat-menu-item (click)="logout($event)" *ngIf="loggedIn">
+          <mat-icon>exit_to_app</mat-icon>
+          <span>Logout</span>
+        </button>
+      </mat-menu>
+    </div>
+
   </div>
 
 </nav>

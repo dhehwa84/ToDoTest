@@ -30,4 +30,7 @@ export class JarwisService {
   updateUser(data, id) {
     return this.http.post(`${this.baseUrl}/update/${id}`, data);
   }
+  setImage(data, id) {
+    return this.http.post(`${this.baseUrl}/setimage/${id}`, data);
+  }
 }

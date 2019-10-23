@@ -4,6 +4,7 @@ import {TokenService} from '../../Services/token.service';
 import {Router} from '@angular/router';
 import {UserService} from '../../Services/user.service';
 import {BehaviorSubject} from 'rxjs';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-profile',
@@ -18,15 +19,18 @@ export class ProfileComponent implements OnInit {
     email: null,
     name: null,
     surname: null,
-    password: null
+    password: null,
+    imageUrl: null
   };
+  public image: File = null;
   public error = null;
   public success = null;
   constructor(
     private Jarwis: JarwisService,
     private Token: TokenService,
     private router: Router,
-    private User: UserService) { }
+    private User: UserService,
+    private http: HttpClient) { }
 
   onSubmit() {
     this.Jarwis.updateUser(this.form, this.form.id).subscribe(
@@ -46,6 +50,7 @@ export class ProfileComponent implements OnInit {
     this.form.email = data.email;
     this.form.name = data.name;
     this.form.surname = data.surname;
+    this.form.imageUrl = data.baseUrl + data.image;
     this.User.changeLoggedInName(data.name);
   }
   handleSaveResponse(data) {
@@ -59,5 +64,24 @@ export class ProfileComponent implements OnInit {
     }
   }
   // image upload
+  onFileSelected(event) {
+    this.image = event.target.files[0] as File;
+    // change image
+    const reader = new FileReader();
+    reader.onload = (evt: any) => {
+      this.form.imageUrl = evt.target.result;
+    };
+    reader.readAsDataURL(this.image);
+    this.onUpload();
+  }
+  onUpload() {
+    const fd = new FormData();
+    fd.append('image', this.image);
+    this.Jarwis.setImage(fd, this.form.id).subscribe(
+      data => this.form.imageUrl = data.url,
+      error => this.handleError(error)
+    );
+  }
+
 
 }

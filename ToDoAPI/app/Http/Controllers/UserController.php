@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use http\Env\Response;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -17,7 +18,9 @@ class UserController extends Controller
     }
     public function me($id){
         //return Auth::user();
-        return User::find($id);
+        $user = User::find($id);
+        $user['baseUrl'] = url('');
+        return  $user;
     }
     public function store(Request $request){
         return User::create($request->all());
@@ -38,6 +41,23 @@ class UserController extends Controller
         $task->delete();
 
         return 204;
+    }
+
+    public function setimage(Request $request, $id){
+        if ($request->hasFile('image'))
+        {
+            $fileName = $_FILES["image"]["name"];
+            $fileUrl = "/img/".$_FILES["image"]["name"];
+            $path = $request->file('image')->move(public_path('/img'), $fileName);
+            User::where('id', $id)->update(array('image' => $fileUrl));
+
+            return response()->json(['url' => url(''.$fileUrl)], 200);
+        }else{
+            return response()->json(['error' => 'no files'], 500);
+        }
+    }
+    public function testImageDownload(){
+        return response()->download(public_path('img/image.jpg'), 'image');
     }
 
 }

@@ -17,7 +17,7 @@ export class NewtaskComponent implements OnInit {
     title: null,
     dueDate: null,
     status: 'pending',
-    created_by: this.id
+    created_by: null
   };
   constructor(
     private User: UserService,
@@ -25,14 +25,14 @@ export class NewtaskComponent implements OnInit {
     private Token: TokenService,
     private router: Router) { }
   onSubmit() {
+    this.form.created_by = this.User.getId();
     this.Jarwis.newTask(this.form).subscribe(
       data => this.handleResponse(data),
       error => this.handleError(error)
     );
   }
   handleResponse(data) {
-    this.Token.handle(data.access_token);
-    this.router.navigateByUrl('/tasks');
+    this.error = data.message;
   }
 
   handleError(error) {
@@ -41,6 +41,7 @@ export class NewtaskComponent implements OnInit {
 
   ngOnInit() {
     this.User.idValue.subscribe(value => this.id = value);
+    this.id = this.User.getId();
 
   }
 
