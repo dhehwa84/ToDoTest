@@ -2,16 +2,20 @@
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/ToDoAPI/app" isTestSource="false" packagePrefix="App\" />
       <sourceFolder url="file://$MODULE_DIR$/ToDoAPI/tests" isTestSource="true" packagePrefix="Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/dnoegel/php-xdg-base-dir" />
+      <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/doctrine/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/doctrine/dbal" />
+      <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/doctrine/event-manager" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/doctrine/inflector" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/doctrine/instantiator" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/doctrine/lexer" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/dragonmantank/cron-expression" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/egulias/email-validator" />
-      <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/erusev/parsedown" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/facade/flare-client-php" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/facade/ignition" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/facade/ignition-contracts" />
@@ -24,6 +28,7 @@
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/laravel/framework" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/laravel/tinker" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/lcobucci/jwt" />
+      <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/league/commonmark" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/league/flysystem" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/mockery/mockery" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/monolog/monolog" />
@@ -69,6 +74,7 @@
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/symfony/console" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/symfony/css-selector" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/symfony/debug" />
+      <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/symfony/error-handler" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/symfony/event-dispatcher" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/symfony/event-dispatcher-contracts" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/symfony/finder" />

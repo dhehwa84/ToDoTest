@@ -37,7 +37,6 @@
       <path value="$PROJECT_DIR$/ToDoAPI/vendor/facade/flare-client-php" />
       <path value="$PROJECT_DIR$/ToDoAPI/vendor/facade/ignition-contracts" />
       <path value="$PROJECT_DIR$/ToDoAPI/vendor/swiftmailer/swiftmailer" />
-      <path value="$PROJECT_DIR$/ToDoAPI/vendor/erusev/parsedown" />
       <path value="$PROJECT_DIR$/ToDoAPI/vendor/phpspec/prophecy" />
       <path value="$PROJECT_DIR$/ToDoAPI/vendor/fzaninotto/faker" />
       <path value="$PROJECT_DIR$/ToDoAPI/vendor/ramsey/uuid" />
@@ -92,12 +91,17 @@
       <path value="$PROJECT_DIR$/ToDoAPI/vendor/tymon/jwt-auth" />
       <path value="$PROJECT_DIR$/ToDoAPI/vendor/namshi/jose" />
       <path value="$PROJECT_DIR$/ToDoAPI/vendor/lcobucci/jwt" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/league/commonmark" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/doctrine/cache" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />
   <component name="PhpUnit">
     <phpunit_settings>
-      <PhpUnitSettings load_method="CUSTOM_LOADER" custom_loader_path="$PROJECT_DIR$/ToDoAPI/vendor/autoload.php" />
+      <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/ToDoAPI/vendor/autoload.php" />
     </phpunit_settings>
   </component>
 </project>
