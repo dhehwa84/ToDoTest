@@ -1,58 +1,90 @@
-<div class="mt-2 col-10 offset-1">
+
+<div class="mt-0 col-12 offset-0">
   <div class="card">
-    <div class="card-header"> Tasks </div>
+    <div class="card-header"> Tasks</div>
     <div class="card-body">
+      <!--tasks table start-->
+      <div class="mat-elevation-z8">
+        <mat-form-field>
+          <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+        </mat-form-field>
+        <table mat-table matTableExporter [dataSource]="dataSource" class="table">
 
-      <div class="alert alert-success" [hidden]="!message">
-        {{message}}
+          <!-- Position Column -->
+          <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef> Id.</th>
+            <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+          </ng-container>
+
+          <!-- title Column -->
+          <ng-container matColumnDef="title">
+            <th mat-header-cell *matHeaderCellDef> Title</th>
+            <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+          </ng-container>
+
+          <!-- status Column -->
+          <ng-container matColumnDef="status">
+            <th mat-header-cell *matHeaderCellDef> Status</th>
+            <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+          </ng-container>
+
+          <!-- view Column -->
+          <ng-container matColumnDef="view">
+            <th mat-header-cell *matHeaderCellDef> Edit</th>
+            <td mat-cell *matCellDef="let element"> <button class="btn btn-info" (click)="viewTask(element); open(content)"> edit</button> </td>
+          </ng-container>
+
+          <!-- delete Column -->
+          <ng-container matColumnDef="delete">
+            <th mat-header-cell *matHeaderCellDef> Delete</th>
+            <td mat-cell *matCellDef="let element"><button class="btn btn-danger" (click)="delete(element.id)"> delete</button> </td>
+          </ng-container>
+
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+        <mat-paginator [pageSizeOptions]="[5, 10, 20, 100]" showFirstLastButtons></mat-paginator>
       </div>
-      <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-
-        <!-- id COlumn -->
-        <ng-container matColumnDef="id">
-          <mat-header-cell *matHeaderCellDef>id</mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.id}}</mat-cell>
-        </ng-container>
-
-        <!-- id COlumn -->
-        <ng-container matColumnDef="title">
-          <mat-header-cell *matHeaderCellDef>title</mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.title}}</mat-cell>
-        </ng-container>
-
-        <!-- id COlumn -->
-        <ng-container matColumnDef="status">
-          <mat-header-cell *matHeaderCellDef>status</mat-header-cell>
-          <mat-cell *matCellDef="let element">
-            <mat-form-field>
-              <mat-label class="mat-label">{{element.status}}</mat-label>
-              <select matNativeControl #stat (change)="updateStatus(element, stat.value)" required>
-                <option value="">select to update</option>
-                <option value="pending">pending</option>
-                <option value="done">done</option>
-              </select>
-            </mat-form-field>
-          </mat-cell>
-        </ng-container>
-
-        <!-- id COlumn -->
-        <ng-container matColumnDef="view">
-          <mat-header-cell *matHeaderCellDef>view/ edit</mat-header-cell>
-          <mat-cell *matCellDef="let element">  <button class="btn btn-info" (click)="viewTask(element)"> edit</button> </mat-cell>
-        </ng-container>
-
-        <!-- id COlumn -->
-        <ng-container matColumnDef="delete">
-          <mat-header-cell *matHeaderCellDef>Delete</mat-header-cell>
-          <mat-cell *matCellDef="let element">  <button class="btn btn-danger" (click)="delete(element)"> delete</button> </mat-cell>
-        </ng-container>
-
-        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-
-      </mat-table>
-      <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
-
+      <!--end tasks table-->
     </div>
+
   </div>
+  <!--edit modal start-->
+  <ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Edit: {{taskForm.title}}</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <form #AddToCartForm=ngForm (ngSubmit)="onSubmit()">
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="title">Title</label>
+          <div class="input-group">
+            <input type="text" id="sell_price" class="form-control" placeholder="title" name="title"
+              [(ngModel)]="taskForm.title" >
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="status">Status : {{taskForm.status}}</label>
+          <div class="input-group">
+            <select name="status" class="form-control" [(ngModel)]="taskForm.status" required>
+              <option value="" selected>select to update</option>
+              <option value="pending">pending</option>
+              <option value="done">done</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-outline-dark" [disabled]="!AddToCartForm.valid">Save</button>
+      </div>
+    </form>
+  </ng-template>
+  <!--end  modal -->
+
+
 </div>
