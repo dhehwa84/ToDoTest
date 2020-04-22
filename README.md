@@ -10,5 +10,5 @@
  - Then you can start the server
  
 ### Client Configuration
- - Run `npm instal`, all dependancies should be installed
+ - Run `npm install`, all dependancies should be installed
  - Then you can start the server.
