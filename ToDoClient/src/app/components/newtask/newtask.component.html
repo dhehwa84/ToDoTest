@@ -4,9 +4,6 @@
     <div class="card-header"> New Task </div>
     <div class="card-body">
       <form #newTaskForm=ngForm (ngSubmit)="onSubmit()">
-        <div class="alert alert-danger" [hidden]="!error">
-          {{error}}
-        </div>
 
         <div class="form-group row">
           <label for="title" class="col-sm-2 col-form-label">Name</label>

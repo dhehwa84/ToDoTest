@@ -1,7 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
-
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NotifierModule } from 'angular-notifier';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgxSpinnerModule } from 'ngx-spinner';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -60,11 +63,15 @@ import { ViewtaskComponent } from './Components/viewtask/viewtask.component';
     CdkTableModule,
     MatFormFieldModule,
     MatPaginatorModule,
-    MatInputModule
+    MatInputModule,
+    NgxSpinnerModule,
+    NgbModule,
+    NotifierModule
   ],
   providers: [JarwisService, TokenService, AuthService, AfterLoginService, BeforeLoginService,
     { provide: 'SnotifyToastConfig', useValue: ToastDefaults},
     SnotifyService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

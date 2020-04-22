@@ -1,15 +1,14 @@
 <!-- As a heading -->
-<nav class="navbar navbar-light bg-light justify-content-between">
-  <a class="navbar-brand" routerLink="/tasks" >Dashboard</a>
+<nav class="navbar navbar-light bg-light justify-content-between" *ngIf="loggedIn">
+  <a class="navbar-brand" routerLink="/tasks"  >Dashboard</a>
   <div>
-
     <a class="navbar-brand" href="login" *ngIf="!loggedIn">Login</a>
     <div *ngIf="loggedIn">
       <button mat-icon-button aria-label="Example icon-button with a menu" routerLink="newtask" *ngIf="loggedIn">
         <mat-icon>add</mat-icon>
       </button>
     <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
-      <mat-icon>account_circle</mat-icon>
+      <img [src]="thumbnailUrl" class="img-thumbnail rounded-circle" alt="thumbnailUrl">
     </button>
     <a class="navbar-brand" href="#">{{name}}</a>
 

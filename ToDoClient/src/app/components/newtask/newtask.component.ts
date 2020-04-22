@@ -3,6 +3,8 @@ import {UserService} from '../../Services/user.service';
 import {JarwisService} from '../../Services/jarwis.service';
 import {TokenService} from '../../Services/token.service';
 import {Router} from '@angular/router';
+import { NgxSpinnerService } from 'ngx-spinner';
+import { NotifierService } from 'src/app/Services/notifier.service';
 
 @Component({
   selector: 'app-newtask',
@@ -11,8 +13,9 @@ import {Router} from '@angular/router';
 })
 export class NewtaskComponent implements OnInit {
 
+  // user id
   public id = null;
-  public error = null;
+  // new task form
   public form = {
     title: null,
     dueDate: null,
@@ -23,8 +26,11 @@ export class NewtaskComponent implements OnInit {
     private User: UserService,
     private Jarwis: JarwisService,
     private Token: TokenService,
-    private router: Router) { }
+    private spinner: NgxSpinnerService,
+    private Notifier: NotifierService) { }
+    // create new task
   onSubmit() {
+    this.spinner.show();
     this.form.created_by = this.User.getId();
     this.Jarwis.newTask(this.form).subscribe(
       data => this.handleResponse(data),
@@ -32,14 +38,17 @@ export class NewtaskComponent implements OnInit {
     );
   }
   handleResponse(data) {
-    this.error = 'success';
+    this.Notifier.showNotification('success', data.message);
+    this.spinner.hide();
   }
 
   handleError(error) {
-    this.error = error.error.error;
+   this.Notifier.showNotification('error', error.error.error);
+   this.spinner.hide();
   }
 
   ngOnInit() {
+    // subscribe to user ID
     this.User.idValue.subscribe(value => this.id = value);
     this.id = this.User.getId();
 
