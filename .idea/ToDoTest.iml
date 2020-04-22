@@ -22,7 +22,9 @@
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/fideloper/proxy" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/filp/whoops" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/fzaninotto/faker" />
+      <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/guzzlehttp/psr7" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/hamcrest/hamcrest-php" />
+      <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/intervention/image" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/jakub-onderka/php-console-color" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/jakub-onderka/php-console-highlighter" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/laravel/framework" />
@@ -53,9 +55,11 @@
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/phpunit/php-token-stream" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/phpunit/phpunit" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/psr/container" />
+      <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/psr/http-message" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/psr/log" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/psr/simple-cache" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/psy/psysh" />
+      <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/ralouphie/getallheaders" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/ramsey/uuid" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/scrivo/highlight.php" />
       <excludeFolder url="file://$MODULE_DIR$/ToDoAPI/vendor/sebastian/code-unit-reverse-lookup" />

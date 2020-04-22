@@ -2,16 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c944348a-3296-4bd1-9e1f-aad03d7f425f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/ToDoTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ToDoTest.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ToDoAPI/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/ToDoAPI/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDoAPI/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ToDoAPI/app/Http/Controllers/UserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ToDoAPI/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/ToDoAPI/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ToDoAPI/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ToDoAPI/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDoAPI/composer.lock" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ToDoAPI/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/ToDoAPI/config/app.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ToDoAPI/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/ToDoAPI/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ToDoAPI/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/ToDoAPI/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDoAPI/public/img/IMG_20191010_095149 (2).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDoAPI/public/img/Outdoor-Wedding (2).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDoAPI/public/img/image.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDoAPI/public/img/profile-icon-white-13 (2).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDoAPI/public/img/profile-icon-white-13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDoAPI/public/img/tsoro.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDoClient/src/app/components/profile/profile.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ToDoClient/src/app/components/profile/profile.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDoClient/src/app/components/signup/signup.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ToDoClient/src/app/components/signup/signup.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,14 +26,18 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/ToDoAPI/composer.json</pharConfigPath>
-    <execution>
-      <executable />
-    </execution>
+    <execution />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration">
+  <component name="PhpDebugGeneral" listening_started="true" />
+  <component name="PhpServers">
+    <servers>
+      <server host="localhost" id="dbbf3bfc-27e9-4e97-b496-bfc8402cb090" name="local" port="9000" />
+    </servers>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
     <include_path>
       <path value="$PROJECT_DIR$/ToDoAPI/vendor/symfony/event-dispatcher" />
       <path value="$PROJECT_DIR$/ToDoAPI/vendor/symfony/polyfill-ctype" />
@@ -123,6 +133,10 @@
       <path value="$PROJECT_DIR$/ToDoAPI/vendor/doctrine/dbal" />
       <path value="$PROJECT_DIR$/ToDoAPI/vendor/doctrine/event-manager" />
       <path value="$PROJECT_DIR$/ToDoAPI/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/intervention/image" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/guzzlehttp/psr7" />
     </include_path>
   </component>
   <component name="ProjectConfigurationFiles">
@@ -137,22 +151,16 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="170" />
-    <option name="width" value="1750" />
-    <option name="height" value="980" />
-  </component>
   <component name="ProjectId" id="1ali4kbn5bmNGCD44quwLzbsJUS" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/ToDoAPI" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ToDoAPI/public" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -162,12 +170,30 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
     <property name="ts.external.directory.path" value="C:\Users\Dhehwa\Documents\GitHub\ToDoTest\ToDoClient\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Dhehwa\Documents\GitHub\ToDoTest\ToDoAPI" />
     </key>
+  </component>
+  <component name="RunManager" selected="PHP Remote Debug.xdebug">
+    <configuration name="laravel" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" document_root="$PROJECT_DIR$/TodoApi/public" port="8000" router_script="$PROJECT_DIR$/ToDoAPI/server.php" use_router_script="true">
+      <CommandLine workingDirectory="$PROJECT_DIR$/ToDoAPI/public" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unnamed" type="PhpRemoteDebugRunConfigurationType" factoryName="PHP Remote Debug" nameIsGenerated="true" filter_connections="NOT_FILTER">
+      <method v="2" />
+    </configuration>
+    <configuration name="xdebug" type="PhpRemoteDebugRunConfigurationType" factoryName="PHP Remote Debug" filter_connections="FILTER" server_name="local" session_id="7310222">
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="PHP Built-in Web Server.laravel" />
+      <item itemvalue="PHP Remote Debug.Unnamed" />
+      <item itemvalue="PHP Remote Debug.xdebug" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -192,6 +218,8 @@
       <workItem from="1587316398250" duration="4665000" />
       <workItem from="1587323503428" duration="239000" />
       <workItem from="1587391625289" duration="1464000" />
+      <workItem from="1587436956697" duration="1239000" />
+      <workItem from="1587439461701" duration="12854000" />
     </task>
     <servers />
   </component>
@@ -205,28 +233,107 @@
     </todo-panel>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="746" height="214" key="GridCell.Tab.0.bottom" timestamp="1587316803788">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state x="348" y="67" key="#CLI_Interpreters" timestamp="1587448359787">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="348" y="67" key="#CLI_Interpreters/0.0.1536.824@0.0.1536.824" timestamp="1587448359787" />
+    <state x="361" y="53" key="#Plugins" timestamp="1587442118540">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="53" key="#Plugins/0.0.1536.824@0.0.1536.824" timestamp="1587442118540" />
+    <state x="348" y="67" key="#Servers" timestamp="1587448553233">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="348" y="67" key="#Servers/0.0.1536.824@0.0.1536.824" timestamp="1587448553233" />
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587449506243">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1587449506243" />
+    <state x="484" y="99" key="#xdebug" timestamp="1587448718636">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="484" y="99" key="#xdebug/0.0.1536.824@0.0.1536.824" timestamp="1587448718636" />
+    <state x="545" y="294" width="445" height="329" key="ComposerInitDialogKey" timestamp="1587439665555">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="545" y="294" width="445" height="329" key="ComposerInitDialogKey/0.0.1536.824@0.0.1536.824" timestamp="1587439665555" />
+    <state x="548" y="153" key="FileChooserDialogImpl" timestamp="1587449213386">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="548" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1587449213386" />
+    <state width="769" height="210" key="GridCell.Tab.0.bottom" timestamp="1587477913256">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="769" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587477913256" />
     <state width="746" height="214" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1587316803788" />
-    <state width="746" height="214" key="GridCell.Tab.0.center" timestamp="1587316803788">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="769" height="210" key="GridCell.Tab.0.center" timestamp="1587477913256">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="769" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587477913256" />
     <state width="746" height="214" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1587316803788" />
-    <state width="746" height="214" key="GridCell.Tab.0.left" timestamp="1587316803788">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="769" height="210" key="GridCell.Tab.0.left" timestamp="1587477913256">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="769" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587477913256" />
     <state width="746" height="214" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1587316803788" />
-    <state width="746" height="214" key="GridCell.Tab.0.right" timestamp="1587316803788">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="769" height="210" key="GridCell.Tab.0.right" timestamp="1587477913256">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="769" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587477913256" />
     <state width="746" height="214" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1587316803788" />
+    <state width="746" height="261" key="GridCell.Tab.1.bottom" timestamp="1587477913243">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="746" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587477913243" />
+    <state width="746" height="261" key="GridCell.Tab.1.center" timestamp="1587477913243">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="746" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1587477913243" />
+    <state width="746" height="261" key="GridCell.Tab.1.left" timestamp="1587477913243">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="746" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1587477913243" />
+    <state width="746" height="261" key="GridCell.Tab.1.right" timestamp="1587477913243">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="746" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1587477913243" />
+    <state width="746" height="261" key="GridCell.Tab.2.bottom" timestamp="1587477913243">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="746" height="261" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587477913243" />
+    <state width="746" height="261" key="GridCell.Tab.2.center" timestamp="1587477913243">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="746" height="261" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1587477913243" />
+    <state width="746" height="261" key="GridCell.Tab.2.left" timestamp="1587477913243">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="746" height="261" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1587477913243" />
+    <state width="746" height="261" key="GridCell.Tab.2.right" timestamp="1587477913243">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="746" height="261" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1587477913243" />
+    <state x="277" y="57" key="SettingsEditor" timestamp="1587449061054">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1587449061054" />
     <state x="462" y="149" width="611" height="536" key="find.popup" timestamp="1587317329671">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="462" y="149" width="611" height="536" key="find.popup/0.0.1536.834@0.0.1536.834" timestamp="1587317329671" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/ToDoAPI/app/Http/Controllers/UserController.php</url>
+          <line>60</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
