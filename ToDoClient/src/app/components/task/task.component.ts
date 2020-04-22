@@ -1,13 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import {JarwisService} from '../../Services/jarwis.service';
 import {TokenService} from '../../Services/token.service';
 import {Router} from '@angular/router';
 import {UserService} from '../../Services/user.service';
 import {BehaviorSubject, Observable} from 'rxjs';
-import 'rxjs/add/operator/map';
-import {map} from 'rxjs/operators';
-import {MatTableDataSource} from '@angular/material';
+import { MatPaginator, MatTableDataSource, MatSort } from '@angular/material';
 import {ViewTaskService} from '../../Services/view-task.service';
+import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgxSpinnerService } from 'ngx-spinner';
+import { NotifierService } from 'src/app/Services/notifier.service';
 
 
 @Component({
@@ -17,56 +18,115 @@ import {ViewTaskService} from '../../Services/view-task.service';
 })
 export class TaskComponent implements OnInit {
 
+  // user id
   private id = null;
-  private error = null;
-  private tasksTable = null;
-  private displayedColumns: string[] = ['id', 'title', 'status', 'view', 'delete'];
-  dataSource: MatTableDataSource<any>;
-  private message = null;
-  private form = {
-    status: null
+
+  // holds a form that is being edited
+  public taskForm = {
+    id: null,
+    title: null,
+    dueDate: null,
+    status: null,
+    created_by: null
   };
+  // holds the columns that will be displayed in the table
+  public displayedColumns: string[] = ['id', 'title', 'status', 'view', 'delete'];
+  // holds the table data
+  dataSource = new MatTableDataSource<any>();
+  @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
+  @ViewChild(MatSort, { static: false }) sort: MatSort;
   constructor(
     private Jarwis: JarwisService,
-    private Token: TokenService,
-    private router: Router,
     private User: UserService,
-    private Task: ViewTaskService) { }
+    private Task: ViewTaskService,
+    private modalService: NgbModal,
+    private spinner: NgxSpinnerService,
+    private Notifier: NotifierService) {
+     }
 
   ngOnInit() {
-    this.onLoad();
-  }
-  onLoad() {
+    this.spinner.show();
     this.id = this.User.getId();
     this.Jarwis.getTask(this.id).subscribe(
-      data => this.handleResponse(data),
+      data => this.handleResponse(data, 'tasks'),
       error => this.handleError(error)
     );
   }
   viewTask(task) {
     this.Task.changeViewId(task);
-    this.router.navigateByUrl('/viewtask');
+    this.taskForm.id = task.id;
+    this.taskForm.title = task.title;
+    this.taskForm.status = task.status;
   }
-  handleResponse(data) {
-    this.tasksTable = new BehaviorSubject(data);
-    this.dataSource = this.tasksTable;
+  /**
+   * handles response from multiple functions which return data response
+   *
+   * @param {*} data
+   * @param {*} message
+   * @memberof TaskComponent
+   */
+  handleResponse(data, message) {
+
+    switch (message) {
+      case 'tasks':
+        // set tasks result data to table
+        this.dataSource =  new MatTableDataSource<any>(data.tasks);
+        this.dataSource.paginator = this.paginator;
+        this.dataSource.sort = this.sort;
+        break;
+      case 'update':
+        //
+        this.Notifier.showNotification('success', data.message);
+        location.reload();
+        break;
+      case 'delete':
+      this.Notifier.showNotification('success', data.message);
+      location.reload();
+      break;
+      default:
+        this.Notifier.showNotification('error', 'Error');
+        break;
+    }
+    this.spinner.hide();
+  }
+  handleError(data) {
+    this.Notifier.showNotification('error', data.error.error);
+    this.spinner.hide();
   }
 
-  handleError(error) {
-    this.error = error.error.error;
-  }
-  updateStatus(element, val) {
-    this.form.status = val;
-    console.log(val);
-    this.Jarwis.updateTaskStatus(this.form, element.id).subscribe(
-      data => this.message = 'success',
-      error => console.log(error.status)
+  /**
+   * delete a task
+   * @param task - task to be deleted
+   */
+  delete(taskId) {
+    this.Jarwis.deleteTask(taskId).subscribe(
+      data => this.handleResponse(data, 'delete'),
+      error => this.handleError(error)
     );
   }
-  delete(task) {
-    this.Jarwis.deleteTask(task.id).subscribe(
-      data => this.message = 'success',
-      error => this.message = error.status
+  applyFilter(filterValue: string) {
+    this.spinner.show();
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+    this.spinner.hide();
+  }
+
+  /**
+   * @param content open modal
+   */
+  open(content) {
+    this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
+    }, (reason) => {
+    });
+  }
+  /**
+   * update a task
+   */
+  onSubmit() {
+    this.spinner.show();
+    this.taskForm.created_by = this.User.getId;
+    this.Jarwis.updateTask(this.taskForm).subscribe(
+      data => this.handleResponse(data, 'update'),
+      error => this.handleError(error)
     );
   }
 }
