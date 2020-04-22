@@ -26,20 +26,16 @@ Route::group([
     Route::post('logout', 'AuthController@logout');
     Route::post('refresh', 'AuthController@refresh');
     Route::post('sendPasswordResetLink', 'ResetPasswordController@sendEmail');
-
     Route::get('me/{id}', 'UserController@me');
     Route::put('update/{id}', 'UserController@update');
     Route::post('setimage/{id}', 'UserController@setimage');
-    Route::get('test', 'UserController@testImageDownload');
-    Route::post('testpost', 'UserController@testImageUpload');
 
 
     //task routes
-    Route::get('task', 'TaskController@index');
     Route::get('showtask/{id}', 'TaskController@showtask');
     Route::get('tasks/{id}', 'TaskController@show');
     Route::post('task', 'TaskController@store');
-    Route::post('task/{id}', 'TaskController@update');
-    Route::delete('task/{id}', 'TaskController@delete');
+    Route::post('updateTask', 'TaskController@update');
+    Route::delete('deleteTask/{id}', 'TaskController@delete');
 
 });
