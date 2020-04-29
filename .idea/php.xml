@@ -100,6 +100,7 @@
       <path value="$PROJECT_DIR$/ToDoAPI/vendor/ralouphie/getallheaders" />
       <path value="$PROJECT_DIR$/ToDoAPI/vendor/psr/http-message" />
       <path value="$PROJECT_DIR$/ToDoAPI/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/ToDoAPI/vendor/fsasvari/laravel-uploadify" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />
