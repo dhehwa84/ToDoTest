@@ -38,7 +38,7 @@ export class JarwisService {
    * creates a new task
    *
    * @param {*} data - form data object
-   * @returns 
+   * @returns
    * @memberof JarwisService
    */
   newTask(data) {
@@ -53,6 +53,17 @@ export class JarwisService {
    */
   getTask(userId) {
     return this.http.get(`${this.baseUrl}/tasks/${userId}`);
+  }
+  /**
+   * filter tasks for a user
+   *
+   * @param {*} userId - creator id
+   * @param {*} searchText - string
+   * @returns
+   * @memberof JarwisService
+   */
+  filterTasks(userId, searchText) {
+    return this.http.get(`${this.baseUrl}/filterTasks/${userId}/${searchText}`);
   }
   /**
    * get user details

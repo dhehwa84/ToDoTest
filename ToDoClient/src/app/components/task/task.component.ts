@@ -1,14 +1,12 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import {JarwisService} from '../../Services/jarwis.service';
-import {TokenService} from '../../Services/token.service';
-import {Router} from '@angular/router';
 import {UserService} from '../../Services/user.service';
-import {BehaviorSubject, Observable} from 'rxjs';
 import { MatPaginator, MatTableDataSource, MatSort } from '@angular/material';
 import {ViewTaskService} from '../../Services/view-task.service';
-import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { NotifierService } from 'src/app/Services/notifier.service';
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -41,16 +39,22 @@ export class TaskComponent implements OnInit {
     private Task: ViewTaskService,
     private modalService: NgbModal,
     private spinner: NgxSpinnerService,
-    private Notifier: NotifierService) {
+    private Notifier: NotifierService,
+    private router: Router) {
      }
 
   ngOnInit() {
+    if (this.User.isIdValid()) {
+      this.router.navigateByUrl('login');
+    }
     this.spinner.show();
     this.id = this.User.getId();
+    // get all tasks for logged in user
     this.Jarwis.getTask(this.id).subscribe(
       data => this.handleResponse(data, 'tasks'),
       error => this.handleError(error)
     );
+    //
   }
   viewTask(task) {
     this.Task.changeViewId(task);
@@ -105,9 +109,15 @@ export class TaskComponent implements OnInit {
     );
   }
   applyFilter(filterValue: string) {
-    this.spinner.show();
-    this.dataSource.filter = filterValue.trim().toLowerCase();
-    this.spinner.hide();
+    // if filter value is null, replace will 'all'
+    if (filterValue === '') {
+      filterValue = 'all';
+    }
+    // filter tasks with provided string text
+    this.Jarwis.filterTasks(this.id, filterValue).subscribe(
+      data => this.handleResponse(data, 'tasks'),
+      error => this.handleError(error)
+    );
   }
 
   /**

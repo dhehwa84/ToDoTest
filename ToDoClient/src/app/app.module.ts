@@ -32,7 +32,6 @@ import {
   MatTableModule
 } from '@angular/material';
 import { NewtaskComponent } from './components/newtask/newtask.component';
-import { ViewtaskComponent } from './Components/viewtask/viewtask.component';
 
 @NgModule({
   declarations: [
@@ -44,8 +43,7 @@ import { ViewtaskComponent } from './Components/viewtask/viewtask.component';
     RequestResetComponent,
     ResponseResetComponent,
     TaskComponent,
-    NewtaskComponent,
-    ViewtaskComponent
+    NewtaskComponent
   ],
   imports: [
     BrowserModule,

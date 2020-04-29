@@ -11,6 +11,7 @@ export class BeforeLoginService implements CanActivate{
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean | UrlTree>
     | Promise<boolean | UrlTree> | boolean | UrlTree {
+    const bool = !this.Token.loggedIn();
     return !this.Token.loggedIn();
   }
 }

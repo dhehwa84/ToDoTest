@@ -34,6 +34,7 @@ Route::group([
     //task routes
     Route::get('showtask/{id}', 'TaskController@showtask');
     Route::get('tasks/{id}', 'TaskController@show');
+    Route::get('filterTasks/{userId}/{searchText}', 'TaskController@filterTasks');
     Route::post('task', 'TaskController@store');
     Route::post('updateTask', 'TaskController@update');
     Route::delete('deleteTask/{id}', 'TaskController@delete');

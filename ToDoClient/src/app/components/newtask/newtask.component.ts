@@ -27,7 +27,8 @@ export class NewtaskComponent implements OnInit {
     private Jarwis: JarwisService,
     private Token: TokenService,
     private spinner: NgxSpinnerService,
-    private Notifier: NotifierService) { }
+    private Notifier: NotifierService,
+    private router: Router) { }
     // create new task
   onSubmit() {
     this.spinner.show();
@@ -40,6 +41,7 @@ export class NewtaskComponent implements OnInit {
   handleResponse(data) {
     this.Notifier.showNotification('success', data.message);
     this.spinner.hide();
+    this.router.navigateByUrl('/tasks');
   }
 
   handleError(error) {

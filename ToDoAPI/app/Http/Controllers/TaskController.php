@@ -14,7 +14,7 @@ class TaskController extends Controller
      */
     public function show($id){
         $tasks = Task::where('created_by', '=', $id)->get();
-        
+
         if(sizeof($tasks) > 0) {
             return response()->json([
                 'message' => 'successully retrieved tasks',
@@ -63,13 +63,13 @@ class TaskController extends Controller
         ], 404);
     }
     }
-    
+
     /**
      * updates a function
      */
     public function update(Request $request){
         $task = Task::findOrFail($request['id']);
-   
+
         if( $task->update($request->all())) {
             return response()->json([
                 'message' => 'successully updated task'
@@ -97,6 +97,27 @@ class TaskController extends Controller
         else {
             return response()->json([
                 'error' => 'failed to delete task'
+            ], 404);
+        }
+    }
+    function filterTasks($userId, $searchText) {
+        $filterResults = null;
+        if($searchText == 'all') {
+
+            $filterResults = Task::where('created_by', '=', $userId)->get();
+        } else {
+
+            $filterResults = Task::where('title', 'LIKE', '%'.$searchText.'%')
+                ->where('created_by', '=', $userId)->get();
+        }
+        if($filterResults) {
+            return response()->json([
+                'tasks' => $filterResults
+            ], 201);
+        }
+        else {
+            return response()->json([
+                'error' => 'failed to filter tasks'
             ], 404);
         }
     }
